@@ -1,0 +1,11 @@
+{
+    "teste": 2,
+    "frase": "As vezes, as coisas não dão certo",
+    "receitas": [
+    {
+        "nome": "Bolo de Chocolate"
+    },
+    {
+        "nome": "Pudim"
+    }]
+}
