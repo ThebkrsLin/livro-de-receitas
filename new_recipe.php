@@ -8,9 +8,13 @@
 </head>
 <body>
     <div>
-        <?php
-        $json = json_decode(recipes.json);
-        ?>
+        <form method="post" action="save_recipe.php">
+            Nome da Receita:<br> <input type='text' name='name' required='text'/><br>
+            Ingredientes:<br> <textarea name='ingredients'></textarea><br>
+            Modo de Preparo:<br> <textarea name='preparation' required='text'></textarea><br>
+            <input type="submit" value="Salvar Receita"/><br>
+            <a href="javascript:history.go(-1)">Volar</a>
+        </form>
     </div>
 </body>
 </html>
