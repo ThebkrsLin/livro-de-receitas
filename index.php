@@ -8,9 +8,7 @@
 </head>
 <body>
     <div>
-        <?php
-        ?>
-        <form method="post" action="show_recipe.php">
+        <form method="post" action="show_recipe.php" class="showRecipe">
             <?php
             $json = file_exists("recipes.json")? file_get_contents("recipes.json") : json_last_error_msg();
             $recipes = json_decode($json, true);
@@ -20,17 +18,18 @@
                 foreach(array_keys($recipes["receitas"]) as $nome){
                     echo "<option value='$nome'>$nome</option>";
                 }
-                echo"</select>";
+                echo"</select> ";
                 echo '<input type="submit" value="Ver Receita" color="red"/>';
             }
             else{
-                echo "Não há receitas salvas, crie uma para acessa-la!!!";
+                echo "<h3 style='color: red;'>Não há receitas salvas, crie uma para acessa-la!!!</h3>";
             }
             ?>  
-        </form>
-        <form method="post" action="new_recipe.php">
+        </form><br>
+        <a href="new_recipe.php" style="display: flexbox;">Criar Receita</a>
+        <!--form method="post" action="new_recipe.php">
             <input type="submit" value="Nova Receita"/>
-        </form>
+        </!--form>-->
     </div>
 </body>
 </html>

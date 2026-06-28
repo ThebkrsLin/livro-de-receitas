@@ -11,15 +11,19 @@
         <?php 
         $json = file_get_contents("recipes.json");
         $recipes = json_decode($json, true);
+        $date = date("d/m/Y");
+        $preptime = $_POST["prep-time"];
         $ingredients = $_POST["ingredients"];
         $name = $_POST["name"];
         $preparation = $_POST["preparation"];
         $recipes["receitas"][$name] = [
             "ingredientes" => $ingredients,
-            "preparo" => $preparation
+            "preparo" => $preparation,
+            "data" => $date,
+            "tempopreparo" => "Tempo de Preparo: $preptime Minutos"
         ];
         $saveRecipe = json_encode($recipes, JSON_PRETTY_PRINT);
-        file_put_contents("recipes.json", $saveRecipe);
+        file_put_contents("recipes.json", $saveRecipe, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         echo"<h1>Receita Salva com Sucesso!!!</h1>"
         ?><br>
         <a href="index.php">Voltar</a>

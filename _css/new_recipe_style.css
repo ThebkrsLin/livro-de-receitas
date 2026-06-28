@@ -26,10 +26,6 @@ div {
     width: 550px;
     min-height:300px;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
 }
 
-input{
-    background-color: green;
-    color: white;
-}
