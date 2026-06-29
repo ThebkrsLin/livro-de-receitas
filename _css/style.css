@@ -1,35 +1,88 @@
 body {
     background: url("background-cozinha.webp") no-repeat top center fixed;
     background-size: cover;
+    overflow: hidden;
 }
 
-div::before {
-    content: "Livro de Receitas";
-    font: 10pt Arial;
-    font-weight: bold;
+h1.title {
     text-align: center;
-    font-size: 25px;
+    padding: 10px;
+    font-size: 30px;
     color: white;
     background-color: #0080ff;
-    padding: 5px;
     display: block;
     position: relative;
-    top: -10px;
+    top: -30px;
     left: -10px;
-    width: 560px;
+    width: 100%;
 }
 
-div {
+div.container {
+    font-family: sans-serif;
     background-color: rgba(255,255,255,.8);
     margin: 100px auto 100px auto;
     padding: 10px;
-    width: 550px;
-    min-height:300px;
+    width: 90%;
+    min-height: 400px;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 input{
     background-color: green;
     color: white;
+}
+
+.recipes-grid {
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    background-color: white;
+    border: 2px solid #0080ff;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: sans-serif;
+    transition: all 0.2s;
+}
+
+
+.card:hover {
+    background-color: #0080ff;
+    color: white;
+    /*transform: scale(1.05);*/
+}
+
+.new_recipe_button {
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.new_recipe_button:hover {
+    background-color: #218838;
+}
+
+.empty {
+    color: red;
+}
+
+.saved{
+    color: #218838;
+    padding: 100px;
 }

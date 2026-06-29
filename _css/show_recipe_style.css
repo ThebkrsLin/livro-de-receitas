@@ -1,14 +1,54 @@
 body {
     background: url("background-cozinha.webp") no-repeat top center fixed;
     background-size: cover;
+    overflow: hidden;
 }
 
-div {
+div.container {
     background-color: rgba(255,255,255,.8);
-    margin: 100px auto 100px auto;
-    padding: 10px;
-    width: 550px;
-    min-height:300px;
+    margin: 100px auto;
+    width: 90%;
+    min-height: 300px;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-family: sans-serif;
+    height: 75vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    background-color: #0080ff;
+    padding: 10px;
+    display: block;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 10;
+    margin: 0px -20px;
+    box-sizing: border-box;
+}
+
+.content{
+    text-align: justify;
+    padding: 0px 20px 20px 20px;
+}
+
+.return{
+    margin-top: 10px;
+    background-color: #218838;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.return:hover{
+    background-color: red;
 }

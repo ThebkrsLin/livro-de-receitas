@@ -1,31 +1,66 @@
 body {
     background: url("background-cozinha.webp") no-repeat top center fixed;
     background-size: cover;
+    overflow: hidden;
 }
 
-div::before {
-    content: "Livro de Receitas";
-    font: 10pt Arial;
-    font-weight: bold;
-    text-align: center;
-    font-size: 25px;
+div.container::before {
+    content: "Nova Receita";
+    font-size: 30px;
     color: white;
     background-color: #0080ff;
-    padding: 5px;
+    padding: 10px;
     display: block;
     position: relative;
     top: -10px;
     left: -10px;
-    width: 560px;
+    width: 100%;
 }
 
-div {
+div.container {
     background-color: rgba(255,255,255,.8);
+    border-radius: 10px;
     margin: 100px auto 100px auto;
     padding: 10px;
-    width: 550px;
+    width: 80%;
     min-height:300px;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 75vh;
 }
+
+.save{
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.save:hover{
+    background-color: #004710;
+}
+
+.return{
+    margin-top: 10px;
+    background-color: #218838;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.return:hover{
+    background-color: red;
+}
+
 

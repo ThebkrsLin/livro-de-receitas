@@ -7,7 +7,7 @@
     <title>Salvando Receita</title>
 </head>
 <body>
-    <div>
+    <div class="container">
         <?php 
         $json = file_get_contents("recipes.json");
         $recipes = json_decode($json, true);
@@ -20,13 +20,15 @@
             "ingredientes" => $ingredients,
             "preparo" => $preparation,
             "data" => $date,
-            "tempopreparo" => "Tempo de Preparo: $preptime Minutos"
+            "tempopreparo" => $preptime
         ];
         $saveRecipe = json_encode($recipes, JSON_PRETTY_PRINT);
         file_put_contents("recipes.json", $saveRecipe, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-        echo"<h1>Receita Salva com Sucesso!!!</h1>"
+        echo"<h1 class='saved'>Receita Salva com Sucesso!!!</h1>"
         ?><br>
-        <a href="index.php">Voltar</a>
+        <form action="index.php" >
+            <button type="submit" class="new_recipe_button">Voltar</button>
+        </form>
     </div>
 </body>
 </html>

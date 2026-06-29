@@ -7,17 +7,19 @@
     <title>Nova Receita</title>
 </head>
 <body>
-    <div>
-        <form method="post" action="save_recipe.php">
-            <fieldset>
+    <div class="container">
+        <div class="save-content">
+            <form method="post" action="save_recipe.php">
                 Nome da Receita:<br> <input type='text' name='name' required='text'/><br>
                 Ingredientes:<br> <textarea name='ingredients'></textarea><br>
                 Modo de Preparo:<br> <textarea name='preparation' required='text'></textarea><br>
-                Tempo de Preparo:<br> <input type="number" name="prep-time" min="1" required="number"/><br>
-                <input type="submit" value="Salvar Receita"/><br> 
-            </fieldset><br>
-            <a href="javascript:history.go(-1)">Volar</a>
-        </form>
+                Tempo de Preparo:<br> <textarea name="prep-time" min="1" required="text"></textarea><br>
+                <button type="submit" class="save">Salvar Receita</button><br>
+            </form>
+            <form action="javascript:history.go(-1)">
+                <button type="submit" class="return">Voltar</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

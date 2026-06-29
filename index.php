@@ -7,29 +7,28 @@
     <title>Livro de Receitas</title>
 </head>
 <body>
-    <div>
-        <form method="post" action="show_recipe.php" class="showRecipe">
+    <div class="container">
+        <h1 class="title">LIVRO DE RECEITAS</h1>
+        <div class="recipes-grid">
             <?php
             $json = file_exists("recipes.json")? file_get_contents("recipes.json") : json_last_error_msg();
             $recipes = json_decode($json, true);
             if(!empty($recipes["receitas"])){
-                echo "Receitas:<br>";
-                echo "<select name='choose'>";
+                echo "<h3>Receitas:</h3><br>";
                 foreach(array_keys($recipes["receitas"]) as $nome){
-                    echo "<option value='$nome'>$nome</option>";
+                    echo "<form method='post' action='show_recipe.php'>";
+                    echo "<button type='subtmit'name='choose' value='$nome' class='card'>$nome</button> ";
+                    echo "</form>";
                 }
-                echo"</select> ";
-                echo '<input type="submit" value="Ver Receita" color="red"/>';
             }
             else{
-                echo "<h3 style='color: red;'>Não há receitas salvas, crie uma para acessa-la!!!</h3>";
+                echo "<h3 class='empty'>Não há receitas salvas, crie uma para acessar-las!!!</h3>";
             }
-            ?>  
-        </form><br>
-        <a href="new_recipe.php" style="display: flexbox;">Criar Receita</a>
-        <!--form method="post" action="new_recipe.php">
-            <input type="submit" value="Nova Receita"/>
-        </!--form>-->
+            ?><vr>
+        </div>
+        <form method="post" action="new_recipe.php">
+            <button type="submit" class="new_recipe_button">Nova Receita</button>
+        </form>
     </div>
 </body>
 </html>
