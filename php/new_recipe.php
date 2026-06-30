@@ -14,10 +14,10 @@
                 Ingredientes:<br> <textarea name='ingredients'></textarea><br>
                 Modo de Preparo:<br> <textarea name='preparation' required='text'></textarea><br>
                 Tempo de Preparo:<br> <textarea name="prep-time" min="1" required="text"></textarea><br>
-                <button type="submit" class="save">Salvar Receita</button><br>
-            </form>
-            <form action="javascript:history.go(-1)">
-                <button type="submit" class="return">Voltar</button>
+                <button type="submit" class="saveButton">Salvar Receita</button>
+            </form><br>
+            <form action="index.php">
+                <button type="submit" class="returnButton">Voltar</button>
             </form>
         </div>
     </div>

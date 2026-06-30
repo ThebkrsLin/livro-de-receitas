@@ -4,19 +4,6 @@ body {
     overflow: hidden;
 }
 
-h1.title {
-    text-align: center;
-    padding: 10px;
-    font-size: 30px;
-    color: white;
-    background-color: #0080ff;
-    display: block;
-    position: relative;
-    top: -30px;
-    left: -10px;
-    width: 100%;
-}
-
 div.container {
     font-family: sans-serif;
     background-color: rgba(255,255,255,.8);
@@ -26,40 +13,22 @@ div.container {
     min-height: 400px;
     text-align: center;
     font-family: sans-serif;
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 
-input{
-    background-color: green;
-    color: white;
-}
-
-.recipes-grid {
-    padding: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-    text-align: center;
-}
-
-.card {
-    background-color: white;
-    border: 2px solid #0080ff;
-    border-radius: 10px;
-    padding: 15px 25px;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: sans-serif;
-    transition: all 0.2s;
-}
-
-
-.card:hover {
+.showRecipeButton {
+    margin-top: 10px;
     background-color: #0080ff;
     color: white;
-    /*transform: scale(1.05);*/
+    border: none;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.showRecipeButton:hover {
+    background-color: #0069d3;
 }
 
 .newRecipeButton {
@@ -78,8 +47,20 @@ input{
     background-color: #218838;
 }
 
-.empty {
-    color: red;
+.returnButton {
+    margin-top: 10px;
+    background-color: #0080ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.returnButton:hover{
+    background-color: red;
 }
 
 .saved{

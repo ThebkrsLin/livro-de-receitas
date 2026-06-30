@@ -31,9 +31,9 @@ div.container {
     height: 75vh;
 }
 
-.save{
+.saveButton{
     margin-top: 10px;
-    background-color: #28a745;
+    background-color: #0080ff;
     color: white;
     border: none;
     border-radius: 10px;
@@ -43,13 +43,13 @@ div.container {
     transition: background 0.2s;
 }
 
-.save:hover{
-    background-color: #004710;
+.saveButton:hover{
+    background-color: #0069d2;
 }
 
-.return{
+.returnButton{
     margin-top: 10px;
-    background-color: #218838;
+    background-color: #0080ff;
     color: white;
     border: none;
     border-radius: 10px;
@@ -59,7 +59,7 @@ div.container {
     transition: background 0.2s;
 }
 
-.return:hover{
+.returnButton:hover{
     background-color: red;
 }
 

@@ -27,7 +27,7 @@
             ?><vr>
         </div>
         <form method="post" action="new_recipe.php">
-            <button type="submit" class="new_recipe_button">Nova Receita</button>
+            <button type="submit" class="newRecipeButton">Nova Receita</button>
         </form>
     </div>
 </body>

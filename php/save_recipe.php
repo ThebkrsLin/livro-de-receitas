@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../_css/style.css">
+    <link rel="stylesheet" href="../_css/save_recipe_style.css">
     <title>Salvando Receita</title>
 </head>
 <body>
@@ -23,11 +23,19 @@
             "tempopreparo" => $preptime
         ];
         $saveRecipe = json_encode($recipes, JSON_PRETTY_PRINT);
-        file_put_contents("recipes.json", $saveRecipe, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        file_put_contents("../recipes.json", $saveRecipe, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         echo"<h1 class='saved'>Receita Salva com Sucesso!!!</h1>"
         ?><br>
-        <form action="index.php" >
-            <button type="submit" class="new_recipe_button">Voltar</button>
+        <form action="show_recipe.php" method="post">
+            <?php
+            echo "<button type='submit' name='choose' value='$name' class='showRecipeButton'>Ver Receita</button>"
+            ?>
+        </form><br>
+        <form action="new_recipe.php" method="post">
+            <button type="submit" class="newRecipeButton">Nova Receita</button>
+        </form><br>
+        <form action="index.php">
+            <button type="submit" class="returnButton">Voltar</button>
         </form>
     </div>
 </body>
