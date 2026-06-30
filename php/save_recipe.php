@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="_css/style.css">
+    <link rel="stylesheet" href="../_css/style.css">
     <title>Salvando Receita</title>
 </head>
 <body>
     <div class="container">
         <?php 
-        $json = file_get_contents("recipes.json");
+        $json = file_get_contents("../recipes.json");
         $recipes = json_decode($json, true);
         $date = date("d/m/Y");
         $preptime = $_POST["prep-time"];

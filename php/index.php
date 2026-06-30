@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="_css/style.css">
+    <link rel="stylesheet" href="../_css/style.css">
     <title>Livro de Receitas</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
         <h1 class="title">LIVRO DE RECEITAS</h1>
         <div class="recipes-grid">
             <?php
-            $json = file_exists("recipes.json")? file_get_contents("recipes.json") : json_last_error_msg();
+            $json = file_exists("../recipes.json")? file_get_contents("../recipes.json") : json_last_error_msg();
             $recipes = json_decode($json, true);
             if(!empty($recipes["receitas"])){
                 echo "<h3>Receitas:</h3><br>";

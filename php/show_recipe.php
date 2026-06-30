@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="_css/show_recipe_style.css">
+    <link rel="stylesheet" href="../_css/show_recipe_style.css">
     <title><?php $choose = $_POST["choose"];
     echo "$choose";
     ?></title>
@@ -18,7 +18,7 @@
         <h1><?php echo $choose;?></h1>
         <div class="content">
             <?php
-            $json = file_get_contents("recipes.json");
+            $json = file_get_contents("../recipes.json");
             $recipes = json_decode($json);
             $keys = get_object_vars($recipes->receitas);
             $recipe = $recipes->receitas->$choose;
